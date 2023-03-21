@@ -1,0 +1,321 @@
+/* two font we used here from google fonts i.e: Poppins and Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+body {
+    font-family: 'Poppins',sans-serif;
+    color: var(--primary-text-color);
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+p {
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+/* this way we styled text reviews */
+/* Now also style anchor tag and all */
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+ul {
+    /*to remove that dot from the list we'll write*/
+    list-style: none;
+}
+/* THIS ALL ABOVE THINGS YOU DO IN EVERY WEBSITE */
+
+/* utility classes */
+.small-bold-text {
+    font-size: 1 rem;
+    font-weight: 700;
+}
+.container {
+    max-width:1180px;
+    /*to give margin to left right, here we used auto means it'll be in center*/
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover-link {
+    color:var(--primary-text-color);
+    transition: 0.2s ease-out;
+
+}
+.hover-link:hover {
+    color:var(--accent-color);
+}
+
+.primary-button {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    /* since i have given all my anchor tag as black color so i don't want them to be in black always, i want this primary button one as white in 
+    any circumstances so i defined important */
+    color:white !important;
+    padding:12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    /* since here also hover occurs so give transition keyword */
+    transition: 0.2s ease-out;
+}
+
+.primary-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.secondary-button {
+    /* we can see there is a think border around this button, so use 0.5 px border */
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    /* to make it bold,we'll give font weight */
+    font-weight: 700;
+    color:var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+
+.secondary-button:hover {
+    border-color: var(--accent-color);
+    /* to change text color, here we'll simply use color */
+    color: var(--accent-color) !important;
+}
+/*top banner*/
+
+.top-banner {
+    background-image: url('./assets/asset\ 32.png');
+    background-color: #4fb3d4;
+    background-size:300px;
+    background-repeat:no-repeat;
+}
+.banner-text {
+    color: white;
+    padding:15px 30px;
+    text-align: center;
+}
+.main-nav {
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.company-logo img{
+    width: 200px;
+}
+.nav-links {
+    /*flex basis means width*/
+    flex-basis: 730px; 
+}
+
+.nav-links ul {
+    justify-content:end;
+    gap:40px;
+}
+
+/* header section */
+.header {
+    padding: 50px var(--padding-inline-section) 0;
+}
+
+.header-section {
+    /* instead of justify-content you can also use text-align */
+    justify-content: center;
+    gap: 50px;
+}
+
+.header-left {
+    max-width: 40vw;
+}
+
+.header-left h1{
+    margin-top: 20px;
+}
+
+.get-started-btn {
+    margin-top:20px;
+}
+
+.header-right img {
+    width: 600px;
+}
+
+/* companies section */
+/* if you need to give margin to left right top bottom then instead of writing margin-top margin-left, use margin-block */
+.companies-header {
+    text-align: center;
+    margin-block: 30px;
+    color:var(--primary-text-color);
+}
+
+/* to use the space properly, we'll use justify-content:space-between */
+.logos {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    height:46px;
+}
+
+/* features section */
+.features-header {
+    text-align: center;
+}
+.features-section {
+    /* from top i'll give 80 px, from left-right i'll give padding-inline, and from bottom i'll not give anything so i'll give 0 */  
+    padding:80px var(--padding-inline-section) 0;
+    background-image: url(./assets/asset\ 34.svg);
+    /* if we'll only write background-image then we'll find it is repeating as by default it gets repeated 
+    so we have to give no-repeat*/
+    background-repeat: no-repeat;
+    /* now it'll display in top to make it in center write this below one */
+    background-position: center;
+
+
+}
+.features-heading-text {
+    margin-bottom: 20px;
+}
+.features-area {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:40px;
+    margin-top: 20px;
+}
+.features-card {
+    flex-direction: column;
+    gap:20px;
+    max-width: 30%;
+    text-align: center;
+}
+/* suppose, the size of img is large then short it */
+.features-card img{
+    width:60px;
+}
+/* big-feature-section */
+.big-feature-section {
+    /* here you can give margin also but i'm giving padding  where 30px top padding-inline-section left-right and bottom 0*/
+    padding: 30px var(--padding-inline-section) 0;
+}
+.big-feature-container{
+    gap:30px;
+}
+.feature-img img {
+    /* be int the 100% of its parent image */
+    width: 100%;
+}
+.feature-desc {
+    flex-direction: column;
+    /* by default in class if we write flex then it align in center, to make it align in left, we'll write flex-start */
+    align-items: flex-start;   
+}
+
+/* examples-section */
+.examples-header {
+    text-align: center;
+}
+/* we can also write this above examples-header in the place where we have written feature-header by inserting ',' between them
+but here i made another section */
+.examples-heading-text {
+    margin-block:20px;
+}
+/* without writing this .examples-heading-text you can also do this by inserting flex in class="examples-header 
+and in that block write flex-direction: column because by default it is in row and write gap:20px*/
+.examples-area {
+    justify-content: space-between;
+    margin-block: 30px;
+}
+.examples-card {
+    width:23%; /*if i have written 25% i cannot give space*/
+    position: relative;
+    min-height: 300px;
+    background: black;
+    background-image: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)),url(./assets/asset\ 36.jpeg);
+    /* we have used background as black above bcoz if in some browser if linear gradient don't work, then black bg will be displayed */
+    background-size: cover;
+    /* if you want transition, simply write transition: ease-out */
+    transition: 0.2s ease-out;
+}
+.examples-card:hover {
+    box-shadow: 0 0 10px #888;
+}
+.examples-card:nth-child(3) {
+    background:linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)),url(./assets/asset\ 38.jpeg);
+    background-size: cover;
+}
+.examples-card:nth-child(4) {
+    background:linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)),url(./assets/asset\ 39.jpeg);
+    background-size: cover;
+}
+.card-text {
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+    right:20px;
+    color:white;
+}
+
+/* cta section */
+.cta-section-container {
+    flex-direction: column;
+    gap:30px;
+    color:white;
+}
+/* we can mention background-color in cta-section-container but it'll only take width mentioned above, 
+but since we want width all around more spaces then we have to do it under cta-section */
+.cta-section {
+    background-color: #183b54;
+    padding:120px var(--padding-inline-section) 80px;
+}
+/* since color of p doesn't change so */
+.cta-section-container p{
+    color:white;
+    margin-top: 20px;
+}
+
+/* footer */
+.footer {
+    padding-block:80px;
+    background-color: #ebf2fa;
+}
+.link-column {
+    flex-direction: column;
+    align-items: flex-start;
+    gap:20px;
+}
+
+.footer-container {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* subfooter-section */
+.subfooter {
+    background-color: #b9cde4 ;
+    padding:var(--padding-inline-section);
+}
+.subfooter-container {
+    justify-content: center;
+    gap:30px;
+}
+/* and the hover link class already defined in utility class */
